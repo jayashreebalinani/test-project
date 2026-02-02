@@ -1,0 +1,32 @@
+
+
+// Complete the printLinkedList function below.
+
+/*
+ * For your reference:
+ *
+ * SinglyLinkedListNode {
+ *     int data;
+ *     SinglyLinkedListNode next;
+ * }
+ *
+ */
+
+function linkedListToArray(head)
+{
+    var result = [];
+    var current = head;
+    while(current != null)
+    {
+        result.push(current.data)
+        current = current.next;
+    }
+    return result
+}
+function printLinkedList(head) {
+    
+    
+var ele = linkedListToArray(head);
+(ele.map(i => console.log(i)))
+}
+
