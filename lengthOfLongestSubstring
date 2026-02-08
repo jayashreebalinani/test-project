@@ -1,0 +1,19 @@
+var lengthOfLongestSubstring = function (s) {
+    var arr1 = s.split('');
+    var ele = [];
+    var maxLen = 0;
+
+    for (var i = 0; i < arr1.length; i++) {
+        // if character already exists
+        
+        if (ele.includes(arr1[i])) {
+            // remove elements till duplicate is removed
+            var index = ele.indexOf(arr1[i]);
+            ele = ele.slice(index + 1);
+        }
+
+        ele.push(arr1[i]);
+        maxLen = Math.max(maxLen, ele.length);
+    }
+    return maxLen;
+};
